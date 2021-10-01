@@ -1,0 +1,49 @@
+<p>Welcome in root app</p>
+<ul>
+  <li *ngFor="let option of option">
+     <input type="radio" [disabled]="isTrue" name="price" [checked]="option.id == selectedOption.id" (click)="getValue(option.id)" value= {{option.id}}>{{option.name}}
+  </li>
+</ul>
+<p>Selected Option : <strong>{{selectedOption.name}}
+  <div *ngIf="selectedOption.name=='Shirts'">
+
+  
+
+  </div>
+
+</strong></p>
+<p *ngFor="let u of users">{{u.name}}</p>
+
+
+<input type="text" [(ngModel)]="change"/>
+<b>NgIf with HTML Elements </b><br/>
+<p *ngIf="isValid">
+	Data is valid.
+</p>
+<p *ngIf="!isValid">
+	Data is not valid.
+</p>
+
+<div *ngFor="let id of ids">
+  Id is {{id}}
+  
+  <div *ngIf="id%2 == 0">
+	<div [ngClass]="change">Even Number</div>
+  </div> 	
+  <div *ngIf="id%2 == 1">
+	<div [ngClass]="'two'">Odd Number</div>
+  </div> 	
+</div>
+
+<div *ngFor="let usr of users">
+  Id is {{usr.age}}
+  <div *ngIf="usr.age%2 == 0">
+	<div [ngClass]="'one'">Even Number</div>
+  </div> 	
+  <div *ngIf="usr.age%2 == 1">
+	<div [ngClass]="'two'">Odd Number</div>
+  </div> 	
+</div>
+
+
+

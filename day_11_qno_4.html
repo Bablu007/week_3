@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>WEb</title>
+</head>
+<script>
+function display(){
+var a,b,c;
+a=Number(document.getElementById("id1").value);
+b=Number(document.getElementById("id2").value);
+c= a + b;
+var d=document.getElementById("id3").value=c;
+//document.write(c);
+//alert(d);
+}
+
+
+</script>
+<body>
+Input one:<input type="text" name="val" id="id1"/><br>
+Input two:<input type="text" name="val2" id="id2"/><br>
+<input type="text" name="val2" id="id3"/><br>
+<input type="button" value="Add" onclick="display()"/>
+</body>
+</html>
